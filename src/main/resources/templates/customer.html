@@ -23,14 +23,20 @@
 <table>
     <tr>
         <th>Id</th>
+        <th>Title</th>
         <th>First Name</th>
         <th>Last Name</th>
+        <th>Company Name</th>
+        <th>Phone</th>
     </tr>
     <th:block th:each="customer : ${customers}">
         <tr>
-            <td th:text="${customer.getId()}">...</td>
-            <td th:text="${customer.getFirstName()}">...</td>
-            <td th:text="${customer.getLastName()}">...</td>
+            <td th:text="${customer.getCustomerID()}"></td>
+            <td th:text="${customer.getTitle()}"></td>
+            <td th:text="${customer.getFirstName()}"></td>
+            <td th:text="${customer.getLastName()}"></td>
+            <td th:text="${customer.getCompanyName()}"></td>
+            <td th:text="${customer.getPhone()}"></td>
         </tr>
     </th:block>
 </table>
